@@ -1,0 +1,22 @@
+.productContainer {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+  padding: 5px;
+}
+.details-container {
+  margin-left: 20px;
+}
+.details-container h4 {
+  color: blue;
+}
+.details-container p {
+  color: black;
+}
+.btn {
+  background-color: rgb(236, 183, 48);
+  width: 200px;
+  height: 30px;
+  border: 1px solid darkgray;
+  border-radius: 3px;
+}
