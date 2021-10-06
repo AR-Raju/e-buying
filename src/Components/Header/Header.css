@@ -5,6 +5,14 @@
   text-align: center;
 }
 .navigation {
+  /* position: fixed;
+  overflow: hidden;
+  z-index: 1;
+  width: 100%;
+  margin: auto;
+  top: 0;
+  border-bottom: solid 1px var(--primary-color);
+  opacity: 0.9; */
   background-color: black;
   line-height: 40px;
   font-size: 20px;
@@ -18,4 +26,12 @@
 
 .navigation a:hover {
   background-color: gray;
+}
+
+.scrolled {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: rgb(244, 246, 247);
 }
