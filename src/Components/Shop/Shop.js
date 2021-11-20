@@ -13,7 +13,7 @@ const Shop = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://arcane-retreat-03047.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
@@ -21,7 +21,7 @@ const Shop = () => {
   useEffect(() => {
     const savedCart = getDatabaseCart();
     const productKeys = Object.keys(savedCart);
-    fetch("http://localhost:5000/productByKeys", {
+    fetch("https://arcane-retreat-03047.herokuapp.com/productByKeys", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -33,9 +33,10 @@ const Shop = () => {
   }, []);
 
   let handleAddProduct = (product) => {
-    // console.log(product);
     const toBeAddedKey = product.key;
+    console.log(toBeAddedKey);
     const sameProduct = cart.find((pd) => pd.key === toBeAddedKey);
+
     let count = 1;
     let newCart;
     if (sameProduct) {
@@ -50,6 +51,7 @@ const Shop = () => {
     setCart(newCart);
     addToDatabaseCart(product.key, count);
   };
+  console.log(cart);
   return (
     <div className="shop-container">
       <div className="product-container">

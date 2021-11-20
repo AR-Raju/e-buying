@@ -18,7 +18,7 @@ const Shipment = () => {
       orderTime: new Date(),
     };
 
-    fetch("http://localhost:5000/addOrder", {
+    fetch("https://arcane-retreat-03047.herokuapp.com/addOrder", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

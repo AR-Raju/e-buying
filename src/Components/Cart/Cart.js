@@ -2,7 +2,7 @@ import React from "react";
 
 const Cart = (props) => {
   const cart = props.cart;
-  // console.log(cart);
+  console.log(cart);
   let total = cart.reduce(
     (total, prd) => total + prd.price * prd.quantity || 1,
     0
@@ -13,7 +13,7 @@ const Cart = (props) => {
   } else if (total > 0) {
     shipping = 12;
   }
-
+  console.log(total);
   return (
     <div>
       <h3 className="text-danger">Order Summary</h3>

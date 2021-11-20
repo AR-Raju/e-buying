@@ -35,7 +35,7 @@ const Review = () => {
     const savedCart = getDatabaseCart();
     const productKey = Object.keys(savedCart);
 
-    fetch("http://localhost:5000/productByKeys", {
+    fetch("https://arcane-retreat-03047.herokuapp.com/productByKeys", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

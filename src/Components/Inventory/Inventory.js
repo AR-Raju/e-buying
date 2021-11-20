@@ -14,7 +14,7 @@ const Inventory = () => {
       price: data.price,
       imageURL: imageURL,
     };
-    const url = `http://localhost:5000/addProduct`;
+    const url = `https://arcane-retreat-03047.herokuapp.com/addProduct`;
     console.log(productData);
     fetch(url, {
       method: "POST",
